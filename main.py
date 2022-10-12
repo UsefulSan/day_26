@@ -24,7 +24,7 @@ def write_file_fk(name: str, data: list) -> None:
     """
     Записывает обработанные данные для foreign key в файл
     """
-    with open('fk_' + name + '.csv', mode='w', encoding='utf-8') as file:
+    with open(name + '.csv', mode='w', encoding='utf-8') as file:
         names = ("Id", f"{name}")
         file_writer = csv.DictWriter(file, lineterminator='\r', fieldnames=names)
         file_writer.writeheader()
